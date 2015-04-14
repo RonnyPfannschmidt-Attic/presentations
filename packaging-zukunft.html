@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>TEH GUMBY ELF</title>
+
+  <meta name="description" content="">
+  <meta name="author" content="Ronny Pfannschmidt">
+
+  <link rel="stylesheet" href="reveal.js/2.6.1/css/reveal.min.css">
+  <link rel="stylesheet" href="reveal.js/2.6.1/css/theme/sky.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="reveal.js/2.6.1/lib/css/zenburn.css">
+
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <section>
+          <h1>Hallo Auch</h1>
+          <h2 class="fragment fade-in">Die Welt, Python Packaging und so</h2>
+        </section>
+        <section>
+          <h2>was?</h2>
+          <ul>
+            <li class="fragment fade-in">Die Altlasten</li>
+            <li class="fragment fade-in">Aktueller Stand</li>
+            <li class="fragment fade-in">Was Kommt</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Altlasten</h2>
+          <ul>
+            <li class="fragment fade-in">distutils</li>
+            <li class="fragment fade-in">setuptools</li>
+            <li class="fragment fade-in">facepalm, wtf?</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Aktueller Stand</h2>
+          <ul>
+            <li class="fragment fade-in">Pip</li>
+            <li class="fragment fade-in">Virtualenv</li>
+            <li class="fragment fade-in">Wheel</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Was ist im Aufbau</h2>
+          <ul>
+            <li class="fragment fade-in">Static metadata</li>
+            <li class="fragment fade-in">
+              <a href="https://pypi.python.org/pypi/setuptools_scm">
+                Setuptools_SCM</a></li>
+            <li class="fragment fade-in">
+              Experimente
+              <ul>
+                <li class="fragment fade-in">Gumby Elf</li>
+                <li class="fragment fade-in">
+                  <a href="https://pypi.python.org/pypi/flit/">Flit</a>
+                </li>
+              </ul>
+            </li>
+            <li class="fragment fade-in">Pip Wheel Cache!!</li>
+            <li class="fragment fade-in">
+              Pip Foreign Installers (planning stage)
+            </li>
+          </ul>
+        </section>
+      </section>
+
+
+
+      <section>
+        <section>
+          <h1>Gumby Elf</h1>
+        </section>
+        <section>
+          <h2> the idea </h2>
+          <ul>
+            <li class="fragment fade-in"> wheels </li>
+            <li class="fragment fade-in"> backward compatible sdist </li>
+            <li class="fragment fade-in"> strict layout </li>
+            <li class="fragment fade-in"> gradual extra </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Wishful Stacked Timeline</h2>
+          <ul>
+            <li class="fragment fade-in"> + 1 months - Protoype, yay install </li>
+            <li class="fragment fade-in"> + 1-2 months - tox and testing </li>
+            <li class="fragment fade-in"> + 2 months - pip integration </li>
+            <li class="fragment fade-in"> + 2 months - cffi libs </li>
+            <li class="fragment fade-in"> + 2 months - cython </li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h2> Halp PLZ </h2>
+          <ul>
+            <li class="fragment fade-in"> How do *you* package ? </li>
+            <li class="fragment fade-in"> How do *you* test ? </li>
+            <li class="fragment fade-in"> What do *you* expect ?!</li>
+            <li class="fragment fade-in"> tell @ossronny on twitter </li>
+            <li class="fragment fade-in"> tell me opensource@ronnypfannschmidt.de </li>
+          </ul>
+        </section>
+      </section>
+
+
+
+    </div>
+  </div>
+  <script src="reveal.js/2.6.1/lib/js/head.min.js"></script>
+  <script src="reveal.js/2.6.1/js/reveal.js"></script>
+  <script type=text/javascript>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: false,
+  fragments: true,
+  overview: true,
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Parallax scrolling
+  // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+  // parallaxBackgroundSize: '2100px 900px',
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+  { src: 'reveal.js/2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'reveal.js/2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'reveal.js/2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'reveal.js/2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'reveal.js/2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: 'reveal.js/2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+</script>
