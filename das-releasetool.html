@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>TEH GUMBY ELF</title>
+
+<meta name="description" content="">
+<meta name="author" content="Ronny Pfannschmidt">
+
+<link rel="stylesheet" href="reveal.js/2.6.1/css/reveal.min.css">
+<link rel="stylesheet" href="reveal.js/2.6.1/css/theme/sky.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/2.6.1/lib/css/zenburn.css">
+
+
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section>
+<h1>Gumby Elf</h1>
+</section>
+
+<section>
+<h2>packaging as is</h2>
+<ul>
+<li class="fragment fade-in"> distutils </li>
+<li class="fragment fade-in"> setuptools </li>
+<li class="fragment fade-in"> facepalm, wtf? </li>
+</ul>
+</section>
+<section>
+<h2> the idea </h2>
+<ul>
+<li class="fragment fade-in"> wheels </li>
+<li class="fragment fade-in"> backward compatible sdist </li>
+<li class="fragment fade-in"> strict layout </li>
+<li class="fragment fade-in"> gradual extra </li>
+</ul>
+</section>
+
+<section>
+<h2>Wishful Timeline</h2>
+<ul>
+<li class="fragment fade-in"> 1 months - Protoype, yay install </li>
+<li class="fragment fade-in"> 3 months - tox and testing </li>
+<li class="fragment fade-in"> 5 months - cffi libs </li>
+<li class="fragment fade-in"> 7 months - cython </li>
+</ul>
+</section>
+
+
+<section>
+<h2> Halp PLZ </h2>
+<ul>
+<li class="fragment fade-in"> How do *you* package ? </li>
+<li class="fragment fade-in"> How do *you* test ? </li>
+<li class="fragment fade-in"> What do *you* expect ?!</li>
+<li class="fragment fade-in"> tell @ossronny on twitter </li>
+<li class="fragment fade-in"> tell me opensource@ronnypfannschmidt.de </li>
+</ul>
+</section>
+
+
+
+
+</div>
+</div>
+<script src="reveal.js/2.6.1/lib/js/head.min.js"></script>
+<script src="reveal.js/2.6.1/js/reveal.js"></script>
+<script type=text/javascript>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: false,
+  fragments: true,
+  overview: true,
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Parallax scrolling
+  // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+  // parallaxBackgroundSize: '2100px 900px',
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'reveal.js/2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'reveal.js/2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'reveal.js/2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'reveal.js/2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'reveal.js/2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'reveal.js/2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+</script>
